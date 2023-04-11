@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/app.css">
+    <link rel=" shortcut icon" type="image/png" href="assets/images/Frame 7.svg" />
     <title>Wahyu Hidayat</title>
 </head>
 
@@ -13,7 +14,7 @@
     <div id="content" class="flex flex-col bg-white text-slate-700 text-sm lg:text-base">
         <!-- navbar -->
         <div
-            class="flex bg-white/80 backdrop-filter backdrop-blur-md z-50 border-b border-b-gray-400/20 shadow-blue-950/10 top-0 sticky">
+            class="flex bg-white/80 backdrop-filter backdrop-blur-md z-40 border-b border-b-gray-400/20 shadow-blue-950/10 top-0 sticky">
             <div class="container mx-auto px-6 flex flex-row items-center justify-between gap-6 py-2 lg:py-4 max-w-7xl">
                 <img src="assets/images/Frame 7.svg" alt="" class="w-[32px] lg:w-[42px]">
                 <button id="menu-button"
@@ -32,7 +33,28 @@
                     <li><a href="#skills" class="nav-menu">Skills</a></li>
                     <li><a href="#contact" class="nav-menu">Contact</a></li>
                 </ul>
-
+            </div>
+            <!-- menu popup -->
+            <div id="menu-popup"
+                class="flex flex-col absolute top-0 right-0 mt-16 min-w-[150px] bg-white shadow-lg mr-6 border border-gray-200 rounded-md hidden">
+                <div class="flex flex-col text-sm">
+                    <a href="#home"
+                        class="px-6 py-3 hover:bg-gray-200 transition duration-200 text-slate-700 hover:text-blue-600">
+                        Home
+                    </a>
+                    <a href="#portofolio"
+                        class="px-6 py-3 hover:bg-gray-200 transition duration-200 text-slate-700 hover:text-blue-600">
+                        Portofolio
+                    </a>
+                    <a href="#skills"
+                        class="px-6 py-3 hover:bg-gray-200 transition duration-200 text-slate-700 hover:text-blue-600">
+                        Skills
+                    </a>
+                    <a href="#contact"
+                        class="px-6 py-3 hover:bg-gray-200 transition duration-200 text-slate-700 hover:text-blue-600">
+                        Contact
+                    </a>
+                </div>
             </div>
         </div>
 
@@ -55,10 +77,7 @@
                         </span>
                         <span class="text-slate-900 text-xl mt-1">Hello, My name is</span>
                         <span class="text-3xl font-bold text-slate-900">Wahyu Hidayat</span>
-                        <span class="mt-2">Im a Data Analyst with more than 3 years experience, i'm familiar with Data
-                            Analyst Tools (Excel, SQL). I can process and analyze data quickly and precisely. Besides
-                            Data Analyst, I also work as a web developer as a freelancer, working with PHP, Laravel and
-                            Tailwindcss.</span>
+                        <span class="mt-2">Im a Productivity Analyst with more than 3 years experience, i'm familiar with Data Analyst Tools (Excel, SQL). I also work as a web developer as a freelancer, working  with PHP, Laravel and Tailwindcss.</span>
                         <div class="flex flex-row gap-4 mt-4 font-semibold flex-wrap">
                             <a href="#contact"
                                 class="px-4 py-2 bg-blue-600 text-white rounded-md flex flex-row items-center gap-2 hover:bg-blue-500 transition duration-200">
@@ -137,7 +156,7 @@
         </div>
 
         <div id="portofolio" class="flex flex-col bg-slate-800 text-blue-200">
-            <div class="container mx-auto flex flex-col px-6 py-8 lg:py-14 gap-8 max-w-7xl">
+            <div class="container mx-auto flex flex-col px-6 py-8 lg:py-16 gap-8 max-w-7xl">
                 <span class="text-xl md:text-3xl font-bold text-white">Portofolio</span>
                 <div id="container-portfolio" class="flex flex-col gap-6 sm:grid sm:grid-cols-2 lg:grid-cols-3">
 
@@ -187,11 +206,11 @@
             <div class="container mx-auto flex flex-col px-6 py-8 gap-8 max-w-7xl lg:py-14">
                 <span class="text-xl md:text-3xl font-bold text-slate-900">Contact</span>
                 <div class="flex flex-col gap-6 lg:grid lg:grid-cols-2">
-                    <div class="flex flex-col gap-6">
-                        <input class="custom-input" type="text" placeholder="Email">
-                        <textarea class="custom-input" name="" id="" cols="30" rows="10"
+                    <div  class="flex flex-col gap-6 p-0 m-0">
+                        <input class="custom-input" type="text" placeholder="Name" id="name" name="email-name">
+                        <textarea class="custom-input" name="message" id="email-message" cols="30" rows="10"
                             placeholder="Messages"></textarea>
-                        <button class="custom-input-button">
+                        <button class="custom-input-button" onclick="sendEmail()">
                             <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mail" width="24"
                                 height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
                                 stroke-linecap="round" stroke-linejoin="round">
@@ -220,25 +239,7 @@
 
     </div>
 
-    <div id="sidebar" class="w-0 h-full bg-slate-800 absolute top-0 z-50 transition duration-300 flex flex-col items-center justify-center overflow-hidden">
-        <div class="flex flex-row items-center justify-end w-full px-6 py-2">
-            <button id="close-button" class="text-white border-2 border-slate-600 rounded-md p-2 hover:text-blue-500 hover:bg-blue-500/20 transition duration-200">
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                    <path d="M18 6l-12 12"></path>
-                    <path d="M6 6l12 12"></path>
-                 </svg>
-            </button>
-        </div>
-        <div class="flex flex-col w-full items-center justify-center my-auto">
-            <div class="flex flex-col w-full items-center justify-center">
-                <a href="#home" class="sidebar-menu">Home</a>
-                <a href="#portofolio" class="sidebar-menu">Portofolio</a>
-                <a href="#skills" class="sidebar-menu">Skills</a>
-                <a href="#contact" class="sidebar-menu">Contact</a>
-            </div>
-        </div>
-    </div>
+
 
     <script src="config.js"></script>
     <script>
@@ -292,22 +293,22 @@
         }
         toolsContainer.innerHTML = toolsTemplate;
 
+        // menu hamburger button
         let menuButton = document.getElementById("menu-button");
-        let closeButton = document.getElementById("close-button");
-        let content = document.getElementById("content");
-        let sidebar = document.getElementById("sidebar");
-
+        let menuPopup = document.getElementById("menu-popup");
         menuButton.addEventListener('click', () => {
-            sidebar.classList.remove("w-0")
-            sidebar.classList.add("w-full")
-            content.classList.add("hidden");
-        });
-
-        closeButton.addEventListener('click', () => {
-            sidebar.classList.add("w-0")
-            sidebar.classList.remove("w-full")
-            content.classList.remove("hidden");
+            menuPopup.classList.toggle("hidden");
         })
+        menuPopup.addEventListener('click', () => {
+            menuPopup.classList.toggle('hidden');
+        })
+
+        let sendEmail = () => {
+            let emailName = document.getElementById("email-name");
+            let emailMessage = document.getElementById("email-message");
+            let emailLink = "mailto:wahyuhidayatsmk2@gmail.com?body=" + encodeURIComponent("Name: " + emailName + "\n\nMessage: " + emailMessage);
+            window.location.href = emailLink;
+        }
 
     </script>
 
