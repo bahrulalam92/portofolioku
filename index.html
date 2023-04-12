@@ -207,7 +207,7 @@
                 <span class="text-xl md:text-3xl font-bold text-slate-900">Contact</span>
                 <div class="flex flex-col gap-6 lg:grid lg:grid-cols-2">
                     <div  class="flex flex-col gap-6 p-0 m-0">
-                        <input class="custom-input" type="text" placeholder="Name" id="name" name="email-name">
+                        <input class="custom-input" type="text" placeholder="Name" id="email-name" name="email-name">
                         <textarea class="custom-input" name="message" id="email-message" cols="30" rows="10"
                             placeholder="Messages"></textarea>
                         <button class="custom-input-button" onclick="sendEmail()">
@@ -304,9 +304,10 @@
         })
 
         let sendEmail = () => {
-            let emailName = document.getElementById("email-name");
-            let emailMessage = document.getElementById("email-message");
+            let emailName = document.getElementById("email-name").value;
+            let emailMessage = document.getElementById("email-message").value;
             let emailLink = "mailto:wahyuhidayatsmk2@gmail.com?body=" + encodeURIComponent("Name: " + emailName + "\n\nMessage: " + emailMessage);
+            console.log(emailLink);
             window.location.href = emailLink;
         }
 
