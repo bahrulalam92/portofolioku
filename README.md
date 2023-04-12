@@ -2,6 +2,10 @@
 
 This is a my personal portofolio for branding myself, i have created this portofolio for 5 days. Feel free to use this portofolio template, just edit some text, colors, and other elements. This portofolio build with Tailwindcss and small of javascript code.
 
+### Demo :
+
+https://wahyuhidayttz.github.io
+
 ### Installation on your local :
 
 1. Clone or Download this repo :
