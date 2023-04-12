@@ -4,7 +4,7 @@ This is a my personal portofolio for branding myself, i have created this portof
 
 ### Demo :
 
-https://wahyuhidayttz.github.io
+https://wahyuhidayattz.github.io/
 
 ### Installation on your local :
 
