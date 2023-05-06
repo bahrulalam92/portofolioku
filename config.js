@@ -1,9 +1,9 @@
 let portfolio = [
     {
         "image": "waris.png",
-        "title": "WARIS",
+        "title": "WEB DEVELOPER",
         "year": "2021",
-        "desc": "Wahyu Reporting Information System is a website for reporting sales, stock, and data related to Indomaret store operations. This website is made to faciitate reporting.",
+        "desc": "Bahrul Reporting Information System is a website for reporting sales, stock, and data related to Indomaret store operations. This website is made to faciitate reporting.",
         "link": "#"
     },
     {
